@@ -70,14 +70,14 @@ minetest.register_on_chat_message(function(name, message)
 
     if uncensored == 1 then
         minetest.kick_player(name, "Hey! Was there a bad word?")
-        minetest.log("action", "Player "..name.." warned for cursing")
+        minetest.log("action", "Player "..name.." warned for cursing. Chat:"..message)
         return true
     end
 
     if uncensored == 2 then
         minetest.kick_player(name, "Cursing or words, inappropriate to game server. Kids may be playing here!")
         minetest.chat_send_all("Player <"..name.."> warned for cursing" )
-        minetest.log("action", "Player "..name.." warned for cursing")
+        minetest.log("action", "Player "..name.." warned for cursing. Chat:"..message)
         return true
     end
 
@@ -90,14 +90,14 @@ if minetest.chatcommands["me"] then
 
         if uncensored == 1 then
             minetest.kick_player(name, "Hey! Was there a bad word?")
-            minetest.log("action", "Player "..name.." warned for cursing")
+            minetest.log("action", "Player "..name.." warned for cursing. Msg:"..param)
             return
         end
 
         if uncensored == 2 then
             minetest.kick_player(name, "Cursing or words, inappropriate to game server. Kids may be playing here!")
             minetest.chat_send_all("Player <"..name.."> warned for cursing" )
-            minetest.log("action", "Player "..name.." warned for cursing")
+            minetest.log("action", "Player "..name.." warned for cursing. Me:"..param)
             return
         end
         
@@ -112,14 +112,14 @@ if minetest.chatcommands["msg"] then
 
         if uncensored == 1 then
             minetest.kick_player(name, "Hey! Was there a bad word?")
-            minetest.log("action", "Player "..name.." warned for cursing")
+            minetest.log("action", "Player "..name.." warned for cursing. Msg:"..param)
             return
         end
 
         if uncensored == 2 then
             minetest.kick_player(name, "Cursing or words, inappropriate to game server. Kids may be playing here!")
             minetest.chat_send_all("Player <"..name.."> warned for cursing" )
-            minetest.log("action", "Player "..name.." warned for cursing")
+            minetest.log("action", "Player "..name.." warned for cursing. Msg:"..param)
             return
         end
         
