@@ -1,6 +1,7 @@
 -- Minetest 0.4.10+ mod: chat_anticurse
 -- punish player for cursing by disconnecting them
 --
+--  Created in 2015 by Andrey. 
 --  This mod is Free and Open Source Software, released under the LGPL 2.1 or later.
 -- 
 -- See README.txt for more information.
