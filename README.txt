@@ -5,11 +5,9 @@ License of source code:
 -----------------------
 Andrey's mod for minetest game
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+This mod is Free and Open Source Software, released under the LGPL 2.1 or later.
 
 http://www.gnu.org/licenses/lgpl-2.1.html
 
-Kick player out when curse word is said.
+Kick player out when he type curse word in chat or using /me or /msg command.
+Checks for some English and Russian curse words.

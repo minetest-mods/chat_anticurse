@@ -1,7 +1,9 @@
 -- Minetest 0.4.10+ mod: chat_anticurse
 -- punish player for cursing by disconnecting them
+--
+--  This mod is Free and Open Source Software, released under the LGPL 2.1 or later.
 -- 
--- See README.txt for licensing and other information.
+-- See README.txt for more information.
 
 chat_anticurse = {}
 chat_anticurse.simplemask = {}
@@ -48,7 +50,7 @@ chat_anticurse.check_message = function(name, message)
     local checkingmessage=string.lower( name.." "..message .." " )
 	local uncensored = 0
     for i=1, #chat_anticurse.simplemask do
-        if string.find(checkingmessage, chat_anticurse.simplemask[i], 1, plain) ~=nil then
+        if string.find(checkingmessage, chat_anticurse.simplemask[i], 1, true) ~=nil then
             uncensored = 2
             break
         end
@@ -56,9 +58,9 @@ chat_anticurse.check_message = function(name, message)
     
     --additional checks
     if 
-        string.find(checkingmessage, " c"..x3.."" .. "m ", 1, plain) ~=nil and 
-        not (string.find(checkingmessage, " c"..x3.."" .. "m " .. "se", 1, plain) ~=nil) and
-        not (string.find(checkingmessage, " c"..x3.."" .. "m " .. "to", 1, plain) ~=nil)
+        string.find(checkingmessage, " c"..x3.."" .. "m ", 1, true) ~=nil and 
+        not (string.find(checkingmessage, " c"..x3.."" .. "m " .. "se", 1, true) ~=nil) and
+        not (string.find(checkingmessage, " c"..x3.."" .. "m " .. "to", 1, true) ~=nil)
     then
         uncensored = 2
     end
