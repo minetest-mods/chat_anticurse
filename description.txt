@@ -1,0 +1,1 @@
+Kick player out when he type curse word in chat or using /me or /msg command. Checks for some English and Russian curse words.
